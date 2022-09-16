@@ -42,11 +42,13 @@ dependencies {
 
     //使用 debugImplementation 和 releaseImplementation, 那么在 Build Variants 中切换时会依赖不同的源码
     //noinspection GradleDependency
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+//    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
     //Optional, if you use support library fragments:
-    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
 
     //看完旧的 1.6.3 的源码看 2.7 的源码更简单
-//   debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    //如果要将分析堆内存放到独立的进程中, 那么使用如下依赖
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android-process:2.7'
 }
