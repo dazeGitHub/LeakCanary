@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
 
+        //因为执行 onDestroy() 的时候 Activity 还没有被回收, 所以这里开启个线程, 过一会再 GC
         new Thread(new Runnable() {
             @Override
             public void run() {
